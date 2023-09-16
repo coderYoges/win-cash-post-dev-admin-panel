@@ -64,50 +64,17 @@ const RenderAdminsListCells = ({ onClickRow, item, idx }) => {
     totalWithdrawal = 0,
     totalUsers = [],
     totalCommissions = 0,
-    clearedDues = false,
-    totalDeposits = 0,
+    pbBalance = 0,
   } = item;
 
-  const childAdminsBalList = item.childAdmins
-    ? item?.childAdmins?.map(
-        ({ balance = 0, totalWithdrawal = 0, totalCommissions = 0 }) => {
-          return balance + totalWithdrawal - totalCommissions;
-        }
-      )
-    : [];
-  const childAdminsBal = childAdminsBalList.reduce(
-    (accumulator, currentValue) => {
-      return accumulator + currentValue;
-    },
-    0
-  );
-  const childUsersBalList = item.childUsers
-    ? item?.childUsers?.map(({ balance = 0, totalWithdrawal = 0 }) => {
-        return balance + totalWithdrawal;
-      })
-    : [];
-  const childUsersBal = childUsersBalList.reduce(
-    (accumulator, currentValue) => {
-      return accumulator + currentValue;
-    },
-    0
-  );
-
-  const totalDues =
-    totalDeposits -
-    (balance + totalWithdrawal - totalCommissions) -
-    (childAdminsBal + childUsersBal);
-
   const onClickConsent = async () => {
-    setHideClear(true);
-    if (!clearedDues) {
+    if (Number(pbBalance) !== 0) {
+      setHideClear(true);
       try {
-        if (totalDues > 0 && totalDues < -1) {
-          await postRequest(WIN_CASH_URL.UPDATE_DUES, { userName: userName });
-        } else {
-          toast.error("You are unable to clear dues", { autoClose: 2000 });
-        }
+        await postRequest(WIN_CASH_URL.UPDATE_DUES, { userName: userName });
+        toast.success("Dues are cleared successfully", { autoClose: 2000 });
       } catch {
+        toast.error("Something went wrong!", { autoClose: 2000 });
       } finally {
         setHideClear(false);
       }
@@ -136,9 +103,9 @@ const RenderAdminsListCells = ({ onClickRow, item, idx }) => {
       </UsersStyle.TableCell>
       <UsersStyle.TableCell
         onClick={onClickConsent}
-        className={totalDues ? "text-danger" : ""}
+        className={Number(pbBalance) < 0 ? "text-danger" : ""}
       >
-        {clearedDues ? 0 : totalDues}
+        {Number(pbBalance)}
         {!hideClear && <StyledCmpt.ClearDuesBtn />}
       </UsersStyle.TableCell>
     </UsersStyle.TableRow>

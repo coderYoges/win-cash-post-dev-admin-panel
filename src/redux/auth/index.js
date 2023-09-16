@@ -3,7 +3,8 @@ import { get } from "lodash";
 
 export const AuthInitialState = {
   isAuthenticated: false,
-  balance: "",
+  balance: 0,
+  pbBalance: 0,
   tier1Parent: "",
   tier2Parent: "",
   tier3Parent: "",
@@ -35,6 +36,7 @@ const authSlice = createSlice({
       ...state,
       isAuthenticated: true,
       balance: get(action, "payload.balance", 0),
+      pbBalance: get(action, "payload.balance", 0),
       tier1Parent: get(action, "payload.tier1Parent", ""),
       tier2Parent: get(action, "payload.tier2Parent", ""),
       tier3Parent: get(state, "payload.tier3Parent", ""),
