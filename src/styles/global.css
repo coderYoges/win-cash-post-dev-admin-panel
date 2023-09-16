@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.fs-def {
+  font-size: 12px !important;
+}
+.fs-md {
+  font-size: 14px !important;
+}
+.fs-lg {
+  font-size: 16px !important;
+}
+.fs-xl {
+  font-size: 18px !important;
+}
+.fs-xxl {
+  font-size: 20px !important;
+}
+.fs-xxxl {
+  font-size: 24px !important;
+}
+
+.fw-400 {
+  font-weight: 400 !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+.fw-600 {
+  font-weight: 600 !important;
+}
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.ft-white {
+  color: white !important;
+}
+.ft-black {
+  color: #000 !important;
+}
+
+
+
+.bg-green {
+  background-color: #008000 !important;
+}
+.bg-blue {
+  background-color: #00008b !important;
+}
+.bg-purple {
+  background-color: #800080 !important;
+}
+.bg-red {
+  background-color: red !important;
+}
+.bg-black {
+  background-color: black !important;
+}
+.bg-olive {
+  background-color: #808000 !important;
+}
+.bg-white {
+  background-color: #fff !important ;
+}
+.bg-salmon {
+  background-color: #fa8072 !important ;
+}
+.bg-dull-white {
+  background-color: #fff !important;
+  opacity: 0.733 !important;
+}
+.bg-disabled {
+  background-color: #808080 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.text-left {
+  align-items: left !important;
+}
+
+.text-right {
+  align-items: right !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.border-rounded {
+  border-radius: 8px !important;
+}

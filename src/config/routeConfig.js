@@ -1,0 +1,51 @@
+export const RouteConfig = {
+  initial: "/",
+  login: "/login",
+  dashboard: "/dashboard",
+  users: "/users",
+  masters: "/masters",
+  superMasters: "/super-masters",
+  admins: "/admins",
+  userDetails: "/users/:id",
+  masterDetails: "/master/:id",
+  superMasterDetails: "/super-master/:id",
+  adminDetails: "/admin/:id",
+  commissions: "/commissions",
+  settings: "/settings",
+  gameMgmt: "/game-management",
+  gameDetails: "/users/:id/game-details",
+};
+
+export const WIN_CASH_URL = {
+  LOGIN: "https://api.wincashbet.in:25271/api/v1/validateAdminUser",
+  CREATE_USER: "https://api.wincashbet.in:25271/api/v1/createUser",
+  GET_USERS: "https://api.wincashbet.in:25271/api/v1/getUsers",
+  DELETE_USER: "https://api.wincashbet.in:25271/api/v1/deleteUser",
+  UPDATE_USER_STATUS: "https://api.wincashbet.in:25271/api/v1/updateUserStatus",
+  UPDATE_USER_PASSWORD: "https://api.wincashbet.in:25271/api/v1/updateUserPassword",
+  UPDATE_USER_BANK_DETAILS:
+    "https://api.wincashbet.in:25271/api/v1/updateUserBankDetails",
+  ADD_USER_BALANCE: "https://api.wincashbet.in:25271/api/v1/addUserBalance",
+  DEBIT_USER_BALANCE: "https://api.wincashbet.in:25271/api/v1/debitUserBalance",
+  GET_ADMINS_BY_PARENT_ID:
+    "https://api.wincashbet.in:25271/api/v1/getAdminsByParentId",
+  CREATE_ADMIN: "https://api.wincashbet.in:25271/api/v1/createAdmin",
+  GET_ADMIN_DETAILS: "https://api.wincashbet.in:25271/api/v1/getAdminDetails",
+  UPDATE_ADMIN_PASSWORD:
+    "https://api.wincashbet.in:25271/api/v1/updateAdminPassword",
+  UPDATE_ADMIN_BANK_DETAILS:
+    "https://api.wincashbet.in:25271/api/v1/updateAdminBankDetails",
+  UPDATE_ADMIN_STATUS: "https://api.wincashbet.in:25271/api/v1/updateAdminStatus",
+  DELETE_ADMIN: "https://api.wincashbet.in:25271/api/v1/deleteAdmin",
+  ADD_ADMIN_BALANCE: "https://api.wincashbet.in:25271/api/v1/addAdminBalance",
+  DEBIT_ADMIN_BALANCE: "https://api.wincashbet.in:25271/api/v1/debitAdminBalance",
+  GET_CURRENT_GAMES: "https://api.wincashbet.in:25271/api/v1/getCurrentGames",
+  SET_GAME_STATUS: "https://api.wincashbet.in:25271/api/v1/setGameStatus",
+  GET_GAME_STATUS: "https://api.wincashbet.in:25271/api/v1/getGameStatus",
+  SET_GAME_RESULT: "https://api.wincashbet.in:25271/api/v1/setGameResult",
+  GET_COMMISSION_RATES: "https://api.wincashbet.in:25271/api/v1/getCommissionRates",
+  SET_COMMISSION_RATES: "https://api.wincashbet.in:25271/api/v1/setCommissionRates",
+  UPDATE_DUES: "https://api.wincashbet.in:25271/api/v1/updateDues",
+  GET_ADMINS_LIST: "https://api.wincashbet.in:25271/api/v1/getAdminsList",
+  GET_USERS_LIST: "https://api.wincashbet.in:25271/api/v1/getUsersList",
+};
